@@ -73,7 +73,46 @@ const otpExpiredCounter = new client.Counter({
     labelNames: ['purpose'],
 });
 
+const requestDurationHistogram = new client.Histogram({
+    name: 'http_request_duration_seconds',
+    help: 'Duration of HTTP requests',
+    labelNames: ['method', 'path', 'statusCode', 'userId'],
+    buckets: [0.1, 0.5, 1, 2, 5, 10],
+});
+
+const requestCounter = new client.Counter({
+    name: 'http_requests_total',
+    help: 'Total number of HTTP requests',
+    labelNames: ['method', 'path', 'statusCode', 'userId'],
+});
+
 class MetricsService {
+    // Request metrics
+    recordRequestDuration(
+        method: string,
+        path: string,
+        statusCode: number,
+        durationMs: number,
+        userId?: string,
+    ): void {
+        const durationSeconds = durationMs / 1000;
+        requestDurationHistogram.observe(
+            {
+                method,
+                path,
+                statusCode,
+                userId: userId || 'anonymous',
+            },
+            durationSeconds,
+        );
+
+        requestCounter.inc({
+            method,
+            path,
+            statusCode,
+            userId: userId || 'anonymous',
+        });
+    }
     // Email metrics
     recordEmailSent(status: 'success' | 'failure', purpose?: string): void {
         emailSentCounter.inc({ status, purpose: purpose || 'general' });

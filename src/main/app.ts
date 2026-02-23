@@ -8,6 +8,12 @@ import { createAuthRoutes } from '../presentation/http/routes/authRoutes';
 import { errorHandler } from '../presentation/http/middlewares/errorHandler';
 import { MetricsService } from '../infrastructure/metrics/MetricsService';
 import { logger } from '../infrastructure/logger/WinstonLogger';
+import { requestIdMiddleware } from '../presentation/http/middlewares/requestIdMiddleware';
+import { createRequestTrackingMiddleware } from '../presentation/http/middlewares/requestTrackingMiddleware';
+import {
+    csrfMiddleware,
+    exposeCsrfToken,
+} from '../presentation/http/middlewares/csrfMiddleware';
 
 export function createApp(
     authController: AuthController,
@@ -35,6 +41,14 @@ export function createApp(
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(cookieParser());
+
+    // Request tracking and identification
+    app.use(requestIdMiddleware);
+    app.use(createRequestTrackingMiddleware(metricsService));
+
+    // CSRF protection
+    app.use(csrfMiddleware);
+    app.use(exposeCsrfToken);
 
     // ─── Health Check ──────────────────────────────────────────
     app.get('/health', (_req, res) => {
