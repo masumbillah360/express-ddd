@@ -7,12 +7,13 @@ client.collectDefaultMetrics();
 const emailSentCounter = new client.Counter({
     name: 'email_sent_total',
     help: 'Total number of emails sent',
-    labelNames: ['status'],
+    labelNames: ['status', 'purpose'],
 });
 
 const emailSendDuration = new client.Histogram({
     name: 'email_send_duration_seconds',
     help: 'Duration of email sending operations',
+    labelNames: ['purpose'],
     buckets: [0.1, 0.5, 1, 2, 5, 10],
 });
 
@@ -48,14 +49,59 @@ const databaseQueryDuration = new client.Histogram({
     buckets: [0.1, 0.5, 1, 2, 5, 10],
 });
 
+const rateLimitExceededCounter = new client.Counter({
+    name: 'rate_limit_exceeded_total',
+    help: 'Total number of rate limit exceeded events',
+    labelNames: ['identifier'],
+});
+
+const otpGeneratedCounter = new client.Counter({
+    name: 'otp_generated_total',
+    help: 'Total number of OTPs generated',
+    labelNames: ['purpose'],
+});
+
+const otpVerifiedCounter = new client.Counter({
+    name: 'otp_verified_total',
+    help: 'Total number of OTPs verified',
+    labelNames: ['purpose', 'status'],
+});
+
+const otpExpiredCounter = new client.Counter({
+    name: 'otp_expired_total',
+    help: 'Total number of expired OTPs',
+    labelNames: ['purpose'],
+});
+
 class MetricsService {
     // Email metrics
-    recordEmailSent(status: 'success' | 'failure'): void {
-        emailSentCounter.inc({ status });
+    recordEmailSent(status: 'success' | 'failure', purpose?: string): void {
+        emailSentCounter.inc({ status, purpose: purpose || 'general' });
     }
 
-    recordEmailSendDuration(duration: number): void {
-        emailSendDuration.observe(duration);
+    recordEmailSendDuration(duration: number, purpose?: string): void {
+        emailSendDuration.observe({ purpose: purpose || 'general' }, duration);
+    }
+
+    // Rate limit metrics
+    recordRateLimitExceeded(identifier: string): void {
+        rateLimitExceededCounter.inc({ identifier });
+    }
+
+    // OTP metrics
+    recordOTPGenerated(purpose: 'verify-email' | 'reset-password'): void {
+        otpGeneratedCounter.inc({ purpose });
+    }
+
+    recordOTPVerified(
+        purpose: 'verify-email' | 'reset-password',
+        status: 'success' | 'failure',
+    ): void {
+        otpVerifiedCounter.inc({ purpose, status });
+    }
+
+    recordOTPExpired(purpose: 'verify-email' | 'reset-password'): void {
+        otpExpiredCounter.inc({ purpose });
     }
 
     // Job metrics

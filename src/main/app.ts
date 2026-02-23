@@ -1,6 +1,7 @@
 import express, { type Application } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import helmet from 'helmet';
 import type { AuthController } from '../presentation/http/controllers/AuthController';
 import type { ITokenService } from '../application/interfaces/ITokenService';
 import { createAuthRoutes } from '../presentation/http/routes/authRoutes';
@@ -16,6 +17,20 @@ export function createApp(
     const app = express();
 
     // ─── Global Middleware ─────────────────────────────────────
+    // Security headers
+    app.use(
+        helmet({
+            contentSecurityPolicy: {
+                directives: {
+                    defaultSrc: ["'self'"],
+                    styleSrc: ["'self'", "'unsafe-inline'", 'https:'],
+                    fontSrc: ["'self'", 'https:', 'data:'],
+                    imgSrc: ["'self'", 'https:', 'data:'],
+                },
+            },
+        }),
+    );
+
     app.use(cors({ origin: true, credentials: true }));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
@@ -41,7 +56,10 @@ export function createApp(
     });
 
     // ─── Routes ────────────────────────────────────────────────
-    app.use('/api/auth', createAuthRoutes(authController, tokenService));
+    app.use(
+        '/api/auth',
+        createAuthRoutes(authController, tokenService, metricsService),
+    );
 
     // ─── Error Handler (must be last) ─────────────────────────
     app.use(errorHandler);

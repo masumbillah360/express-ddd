@@ -257,3 +257,63 @@
 {"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:56","to":"dev1.billah@gmail.com"}
 {"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:20:19","to":"dev.billah@gmail.com"}
 {"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:20:19","to":"dev.billah@gmail.com"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:27:37","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:27:37"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:27:37"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:27:37"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:27:37"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:28:23","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:28:23"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:28:23"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:28:23"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:28:23"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:29:50","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:29:50"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:29:50"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:29:50"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:29:50"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:30:00","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:30:00"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:30:00"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:30:00"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:30:00"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:33:41","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:33:41"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:33:41"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:33:41"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:33:41"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:33:43","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:33:43"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:33:43"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:33:43"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:33:43"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:34:36","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:34:36"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:34:36"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:34:36"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:34:36"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:34:40","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:34:40"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:34:40"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:34:40"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:34:40"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:36:09","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:36:09"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:36:09"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:36:09"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:36:09"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:36:28","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:36:28"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:36:28"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:36:28"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:36:28"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:37:22","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:37:22"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:37:22"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:37:22"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:37:22"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:37:35","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:37:35"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:37:35"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:37:35"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:37:35"}

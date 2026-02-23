@@ -82,13 +82,18 @@ export function createContainer() {
         REFRESH_TOKEN_TTL,
     );
 
-    const verifyEmailUC = new VerifyEmailUseCase(userRepository, cacheService);
+    const verifyEmailUC = new VerifyEmailUseCase(
+        userRepository,
+        cacheService,
+        metricsService,
+    );
 
     const forgotPasswordUC = new ForgotPasswordUseCase(
         userRepository,
         cacheService,
         emailService,
         env.otp.expiryMinutes,
+        metricsService,
     );
 
     const resetPasswordUC = new ResetPasswordUseCase(
@@ -102,6 +107,7 @@ export function createContainer() {
         cacheService,
         emailService,
         env.otp.expiryMinutes,
+        metricsService,
     );
 
     const logoutUC = new LogoutUseCase(tokenService, cacheService);
