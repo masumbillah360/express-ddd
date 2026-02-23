@@ -1,0 +1,61 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: ddd-auth-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+      - redis
+      - mailhog
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:7
+    container_name: ddd-auth-mongodb
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: ddd-auth-redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: ddd-auth-mailhog
+    ports:
+      - "1026:1025"
+      - "8026:8025"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:
+  redis_data:
+
+networks:
+  app-network:
+    driver: bridge
