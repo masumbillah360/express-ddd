@@ -5,10 +5,13 @@ import type { AuthController } from '../presentation/http/controllers/AuthContro
 import type { ITokenService } from '../application/interfaces/ITokenService';
 import { createAuthRoutes } from '../presentation/http/routes/authRoutes';
 import { errorHandler } from '../presentation/http/middlewares/errorHandler';
+import { MetricsService } from '../infrastructure/metrics/MetricsService';
+import { logger } from '../infrastructure/logger/WinstonLogger';
 
 export function createApp(
     authController: AuthController,
     tokenService: ITokenService,
+    metricsService: MetricsService,
 ): Application {
     const app = express();
 
@@ -21,6 +24,20 @@ export function createApp(
     // ─── Health Check ──────────────────────────────────────────
     app.get('/health', (_req, res) => {
         res.json({ status: 'ok', timestamp: new Date().toISOString() });
+    });
+
+    // ─── Metrics Endpoint ──────────────────────────────────────
+    app.get('/metrics', async (_req, res) => {
+        try {
+            const metrics = await metricsService.getMetrics();
+            res.set('Content-Type', 'text/plain');
+            res.send(metrics);
+        } catch (error) {
+            logger.error('Failed to get metrics', {
+                error: error instanceof Error ? error.message : 'Unknown error',
+            });
+            res.status(500).json({ error: 'Failed to get metrics' });
+        }
     });
 
     // ─── Routes ────────────────────────────────────────────────

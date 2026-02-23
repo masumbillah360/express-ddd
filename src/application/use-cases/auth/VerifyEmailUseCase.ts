@@ -18,11 +18,11 @@ export class VerifyEmailUseCase {
         if (!user) throw new UserNotFoundError();
         if (user.isVerified) throw new UserAlreadyVerifiedError();
 
-        // Verify OTP from Redis
+        // Verify OTP from Redis (case-insensitive email handling)
         const cachedOTP = await this.cacheService.get(
-            `otp:verify-email:${dto.email}`,
+            `otp:verify-email:${dto.email.toLowerCase()}`,
         );
-        if (!cachedOTP || cachedOTP !== dto.otp) throw new InvalidOTPError();
+        if (!cachedOTP || String(cachedOTP) !== String(dto.otp)) throw new InvalidOTPError();
 
         // Domain behavior
         user.markAsVerified();

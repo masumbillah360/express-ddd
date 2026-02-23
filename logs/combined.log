@@ -1,0 +1,259 @@
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:04:12","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:05:47","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:05:57","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:05:57"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:05:57"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:05:57"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:05:57"}
+{"level":"info","message":"Queue created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:06:40"}
+{"jobId":"1","jobType":"send-email","level":"info","message":"Job added to queue","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:06:40"}
+{"duration":0.429,"email":"dev.billah@gmail.com","level":"info","message":"User registered successfully","service":"express-ddd","timestamp":"2026-02-23 18:06:40","userId":"699c9730ef4494e99b6916f5"}
+{"jobId":"1","level":"debug","message":"Processing email job","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:06:40","to":"dev.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:06:40","to":"dev.billah@gmail.com"}
+{"duration":0.066,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:06:40","to":"dev.billah@gmail.com"}
+{"duration":0.067,"jobId":"1","level":"info","message":"Email job processed successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:06:40","to":"dev.billah@gmail.com"}
+{"jobId":"1","jobType":"send-email","level":"info","message":"Job completed","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:06:40"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:53:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:41"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:42"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:42"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:43"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:43"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:43"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:43"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:44"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:44"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:44"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:44"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:45"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:45"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:45"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:45"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:45"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:45"}
+{"email":"dev.billah@gmail.com","level":"debug","message":"Cache hit for user email","service":"express-ddd","timestamp":"2026-02-23 18:06:46"}
+{"email":"dev.billah@gmail.com","error":"User with this email already exists","level":"error","message":"Failed to register user","service":"express-ddd","stack":"UserAlreadyExistsError: User with this email already exists\n    at RegisterUseCase.execute (/app/src/application/use-cases/auth/RegisterUseCase.ts:45:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (/app/src/presentation/http/controllers/AuthController.ts:29:28)","timestamp":"2026-02-23 18:06:46"}
+{"jobId":"2","jobType":"send-email","level":"info","message":"Job added to queue","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:08:39"}
+{"duration":0.374,"email":"dev1.billah@gmail.com","level":"info","message":"User registered successfully","service":"express-ddd","timestamp":"2026-02-23 18:08:39","userId":"699c97a7ef4494e99b6916fe"}
+{"jobId":"2","level":"debug","message":"Processing email job","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:08:39","to":"dev1.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:08:39","to":"dev1.billah@gmail.com"}
+{"duration":0.049,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:08:39","to":"dev1.billah@gmail.com"}
+{"duration":0.05,"jobId":"2","level":"info","message":"Email job processed successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:08:39","to":"dev1.billah@gmail.com"}
+{"jobId":"2","jobType":"send-email","level":"info","message":"Job completed","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:08:39"}
+{"jobId":"3","jobType":"send-email","level":"info","message":"Job added to queue","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:09:44"}
+{"duration":0.357,"email":"dev2.billah@gmail.com","level":"info","message":"User registered successfully","service":"express-ddd","timestamp":"2026-02-23 18:09:44","userId":"699c97e8ef4494e99b691702"}
+{"jobId":"3","level":"debug","message":"Processing email job","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:09:44","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:09:44","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:09:44","to":"dev2.billah@gmail.com"}
+{"duration":0.049,"jobId":"3","level":"info","message":"Email job processed successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:09:44","to":"dev2.billah@gmail.com"}
+{"jobId":"3","jobType":"send-email","level":"info","message":"Job completed","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:09:44"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:14:53","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:14:53"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:14:53"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:14:53"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:14:53"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:15:01","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:15:01"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:15:01"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:15:01"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:15:01"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:15:18","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:15:18"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:15:18"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:15:18"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:15:18"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:15:29","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:15:29"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:15:29"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:15:29"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:15:29"}
+{"level":"info","message":"Database connected","service":"express-ddd","timestamp":"2026-02-23 18:15:45","uri":"mongodb://mongodb:27017/ddd-auth"}
+{"host":"mailhog","level":"info","message":"Email service configured","port":1025,"service":"express-ddd","timestamp":"2026-02-23 18:15:45"}
+{"level":"info","message":"Queue manager initialized","redisUrl":"redis://redis:6379","service":"express-ddd","timestamp":"2026-02-23 18:15:45"}
+{"level":"info","message":"Worker created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:15:45"}
+{"level":"info","message":"Redis connected","service":"express-ddd","timestamp":"2026-02-23 18:15:45"}
+{"level":"info","message":"Queue created","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:15:52"}
+{"jobId":"4","jobType":"send-email","level":"info","message":"Job added to queue","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:15:52"}
+{"duration":0.42,"email":"dev3.billah@gmail.com","level":"info","message":"User registered successfully","service":"express-ddd","timestamp":"2026-02-23 18:15:52","userId":"699c9958437c3eb2cf85cac9"}
+{"jobId":"4","level":"debug","message":"Processing email job","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:15:52","to":"dev3.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:15:52","to":"dev3.billah@gmail.com"}
+{"duration":0.071,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:15:52","to":"dev3.billah@gmail.com"}
+{"duration":0.072,"jobId":"4","level":"info","message":"Email job processed successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:15:52","to":"dev3.billah@gmail.com"}
+{"jobId":"4","jobType":"send-email","level":"info","message":"Job completed","queueName":"email-queue","service":"express-ddd","timestamp":"2026-02-23 18:15:52"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:03","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:03","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:04","to":"dev2.billah@gmail.com"}
+{"duration":0.047,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:04","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:05","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:05","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:06","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:06","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:06","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:06","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:07","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:07","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:07","to":"dev2.billah@gmail.com"}
+{"duration":0.049,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:07","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:07","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:07","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.047,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:08","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:09","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.049,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.05,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.047,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.049,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.05,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:10","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.047,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.047,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:11","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:12","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:13","to":"dev2.billah@gmail.com"}
+{"duration":0.047,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"duration":0.049,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:14","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:15","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"duration":0.048,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"duration":0.049,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"duration":0.046,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:16","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"duration":0.045,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:17","to":"dev2.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:56","to":"dev1.billah@gmail.com"}
+{"duration":0.044,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:19:56","to":"dev1.billah@gmail.com"}
+{"level":"debug","message":"Sending email","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:20:19","to":"dev.billah@gmail.com"}
+{"duration":0.043,"level":"info","message":"Email sent successfully","service":"express-ddd","subject":"Verify your email","timestamp":"2026-02-23 18:20:19","to":"dev.billah@gmail.com"}

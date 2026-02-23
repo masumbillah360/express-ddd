@@ -6,6 +6,9 @@ import { RedisCacheService } from '../infrastructure/cache/RedisCacheService';
 import { NodemailerEmailService } from '../infrastructure/email/NodemailerEmailService';
 import { BcryptHashService } from '../infrastructure/security/BcryptHashService';
 import { JWTTokenService } from '../infrastructure/security/JWTTokenService';
+import { QueueService } from '../infrastructure/queue/QueueService';
+import { MetricsService } from '../infrastructure/metrics/MetricsService';
+import { EmailJobProcessor } from '../infrastructure/queue/EmailJobProcessor';
 
 // Use Cases
 import { RegisterUseCase } from '../application/use-cases/auth/RegisterUseCase';
@@ -24,17 +27,32 @@ export function createContainer() {
     // ─── Infrastructure Services ───────────────────────────────
     const userRepository = new MongoUserRepository();
     const hashService = new BcryptHashService(12);
+    const metricsService = new MetricsService();
     const cacheService = new RedisCacheService(env.redis.host, env.redis.port);
     const emailService = new NodemailerEmailService(
         env.email.smtpHost,
         env.email.smtpPort,
         env.email.from,
+        metricsService,
+    );
+    const queueService = new QueueService(
+        `redis://${env.redis.host}:${env.redis.port}`,
     );
     const tokenService = new JWTTokenService(
         env.jwt.accessTokenSecret,
         env.jwt.refreshTokenSecret,
         env.jwt.accessTokenExpiry,
         env.jwt.refreshTokenExpiry,
+    );
+
+    // Create job processors
+    const emailJobProcessor = new EmailJobProcessor(
+        emailService,
+        metricsService,
+    );
+    queueService.createWorker(
+        'email-queue',
+        emailJobProcessor.process.bind(emailJobProcessor),
     );
 
     const REFRESH_TOKEN_TTL = 7 * 24 * 60 * 60; // 7 days in seconds
@@ -44,7 +62,8 @@ export function createContainer() {
         userRepository,
         hashService,
         cacheService,
-        emailService,
+        queueService,
+        metricsService,
         env.otp.expiryMinutes,
     );
 
@@ -99,5 +118,9 @@ export function createContainer() {
         logoutUC,
     );
 
-    return { authController, tokenService };
+    return {
+        authController,
+        tokenService,
+        metricsService,
+    };
 }

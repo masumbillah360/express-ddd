@@ -1,0 +1,23 @@
+meta {
+  name: Resend OTP
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL}}/api/auth/resend-otp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "dev.billah@gmail.com",
+    "purpose": "verify-email"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

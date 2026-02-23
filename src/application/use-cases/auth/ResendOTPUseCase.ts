@@ -28,7 +28,7 @@ export class ResendOTPUseCase {
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
         await this.cacheService.set(
-            `otp:${purpose}:${email}`,
+            `otp:${purpose}:${email.toLowerCase()}`,
             otp,
             this.otpExpiryMinutes * 60,
         );

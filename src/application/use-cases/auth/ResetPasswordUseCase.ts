@@ -18,11 +18,11 @@ export class ResetPasswordUseCase {
         const user = await this.userRepository.findByEmail(dto.email);
         if (!user) throw new UserNotFoundError();
 
-        // Verify OTP
+        // Verify OTP (case-insensitive email handling)
         const cached = await this.cacheService.get(
-            `otp:reset-password:${dto.email}`,
+            `otp:reset-password:${dto.email.toLowerCase()}`,
         );
-        if (!cached || cached !== dto.otp) throw new InvalidOTPError();
+        if (!cached || String(cached) !== String(dto.otp)) throw new InvalidOTPError();
 
         // Domain behavior
         const hashed = await this.hashService.hash(dto.newPassword);

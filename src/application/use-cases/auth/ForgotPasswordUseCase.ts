@@ -18,7 +18,7 @@ export class ForgotPasswordUseCase {
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
         await this.cacheService.set(
-            `otp:reset-password:${email}`,
+            `otp:reset-password:${email.toLowerCase()}`,
             otp,
             this.otpExpiryMinutes * 60,
         );

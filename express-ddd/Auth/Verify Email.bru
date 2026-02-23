@@ -1,0 +1,23 @@
+meta {
+  name: Verify Email
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{URL}}/api/auth/verify-email
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "dev.billah@gmail.com",
+    "otp": "466890"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
