@@ -9,6 +9,10 @@ import { JWTTokenService } from '../infrastructure/security/JWTTokenService';
 import { QueueService } from '../infrastructure/queue/QueueService';
 import { MetricsService } from '../infrastructure/metrics/MetricsService';
 import { EmailJobProcessor } from '../infrastructure/queue/EmailJobProcessor';
+import { SocketService } from '../infrastructure/socket/SocketService';
+
+// Presentation
+import { SocketMiddleware } from '../presentation/socket/socket.middleware';
 
 // Use Cases
 import { RegisterUseCase } from '../application/use-cases/auth/RegisterUseCase';
@@ -128,5 +132,8 @@ export function createContainer() {
         authController,
         tokenService,
         metricsService,
+        socketMiddleware: new SocketMiddleware(tokenService),
+        createSocketService: (io: any) =>
+            new SocketService(io, new SocketMiddleware(tokenService)),
     };
 }
