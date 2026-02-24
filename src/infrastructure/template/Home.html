@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Express DDD - Modern Web Architecture</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                    'Helvetica Neue', Arial, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .container {
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 20px;
+                padding: 60px 40px;
+                max-width: 800px;
+                width: 100%;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                text-align: center;
+                backdrop-filter: blur(10px);
+            }
+
+            h1 {
+                font-size: 3rem;
+                font-weight: 800;
+                color: #667eea;
+                margin-bottom: 20px;
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+                color: #64748b;
+                margin-bottom: 40px;
+                font-weight: 400;
+            }
+
+            .description {
+                font-size: 1.1rem;
+                color: #475569;
+                margin-bottom: 50px;
+                line-height: 1.8;
+            }
+
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+                margin-bottom: 50px;
+            }
+
+            .feature {
+                background: #f8fafc;
+                padding: 30px;
+                border-radius: 15px;
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .feature:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+            }
+
+            .feature h3 {
+                font-size: 1.3rem;
+                color: #667eea;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+
+            .feature p {
+                color: #64748b;
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .tech-stack {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
+            }
+
+            .tech-badge {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 12px 24px;
+                border-radius: 25px;
+                font-size: 0.95rem;
+                font-weight: 600;
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+                transition: transform 0.3s ease;
+            }
+
+            .tech-badge:hover {
+                transform: scale(1.05);
+            }
+
+            .cta-button {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 16px 40px;
+                border: none;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+                box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+            }
+
+            .cta-button:active {
+                transform: translateY(0);
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 40px 20px;
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+
+                .subtitle {
+                    font-size: 1rem;
+                }
+
+                .description {
+                    font-size: 1rem;
+                }
+
+                .features {
+                    grid-template-columns: 1fr;
+                }
+
+                .tech-stack {
+                    gap: 15px;
+                }
+            }
+
+            .logo {
+                font-size: 4rem;
+                margin-bottom: 20px;
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">🚀</div>
+            <h1>Express DDD Architecture</h1>
+            <p class="subtitle">Modern, Scalable Web Application Framework</p>
+
+            <p class="description">
+                Welcome to our Express DDD (Domain-Driven Design) application.
+                This architecture provides a clean separation of concerns,
+                making your application more maintainable, testable, and
+                scalable.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Clean Architecture</h3>
+                    <p>
+                        Separation of business logic from infrastructure
+                        concerns for maximum flexibility.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>Domain Driven</h3>
+                    <p>
+                        Focus on business domain models and operations for
+                        better alignment with requirements.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>Enterprise Grade</h3>
+                    <p>
+                        Built with security, scalability, and maintainability in
+                        mind from the ground up.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Express.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">JWT</span>
+            </div>
+
+            <button
+                class="cta-button"
+                onclick="window.location.href = '/api/auth'">
+                Get Started
+            </button>
+        </div>
+    </body>
+</html>

@@ -50,6 +50,16 @@ export function createApp(
     app.use(csrfMiddleware);
     app.use(exposeCsrfToken);
 
+    // ─── Root Route ──────────────────────────────────────────
+    app.get('/', (_req, res) => {
+        const templatePath = new URL(
+            '../infrastructure/template',
+            import.meta.url,
+        ).pathname;
+        res.sendFile('Home.html', {
+            root: templatePath,
+        });
+    });
     // ─── Health Check ──────────────────────────────────────────
     app.get('/health', (_req, res) => {
         res.json({ status: 'ok', timestamp: new Date().toISOString() });
