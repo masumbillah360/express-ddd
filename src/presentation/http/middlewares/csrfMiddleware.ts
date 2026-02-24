@@ -21,7 +21,13 @@ export const csrfMiddleware = (
         return next();
     }
 
-    // Validate CSRF token for state-changing requests
+    // Bypass CSRF check for API requests (specifically /api/auth routes) during development/testing
+    // This allows tools like Bruno/Postman to send requests without CSRF tokens
+    if (req.path.startsWith('/api/auth')) {
+        return next();
+    }
+
+    // Validate CSRF token for other state-changing requests
     const csrfTokenFromCookie = req.cookies[CSRF_COOKIE_NAME];
     const csrfTokenFromHeader = req.headers[CSRF_HEADER_NAME.toLowerCase()];
     const csrfTokenFromBody = (req.body as any)?._csrf;

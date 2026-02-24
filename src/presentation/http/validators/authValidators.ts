@@ -5,32 +5,32 @@ import type { Request, Response, NextFunction } from 'express';
 
 export const registerSchema = z.object({
     name: z.string().min(2, 'Name must be at least 2 characters'),
-    email: z.string().email('Invalid email address'),
+    email: z.email('Invalid email address'),
     password: z.string().min(8, 'Password must be at least 8 characters'),
 });
 
 export const loginSchema = z.object({
-    email: z.string().email('Invalid email address'),
+    email: z.email('Invalid email address'),
     password: z.string().min(1, 'Password is required'),
 });
 
 export const verifyEmailSchema = z.object({
-    email: z.string().email('Invalid email address'),
+    email: z.email('Invalid email address'),
     otp: z.string().length(6, 'OTP must be 6 digits'),
 });
 
 export const forgotPasswordSchema = z.object({
-    email: z.string().email('Invalid email address'),
+    email: z.email('Invalid email address'),
 });
 
 export const resetPasswordSchema = z.object({
-    email: z.string().email('Invalid email address'),
+    email: z.email('Invalid email address'),
     otp: z.string().length(6, 'OTP must be 6 digits'),
-    newPassword: z.string().min(8, 'Password must be at least 8 characters'),
+    password: z.string().min(8, 'Password must be at least 8 characters'),
 });
 
 export const resendOTPSchema = z.object({
-    email: z.string().email('Invalid email address'),
+    email: z.email('Invalid email address'),
     purpose: z.enum(['verify-email', 'reset-password']),
 });
 

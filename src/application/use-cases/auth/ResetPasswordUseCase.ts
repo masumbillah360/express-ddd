@@ -25,7 +25,7 @@ export class ResetPasswordUseCase {
         if (!cached || String(cached) !== String(dto.otp)) throw new InvalidOTPError();
 
         // Domain behavior
-        const hashed = await this.hashService.hash(dto.newPassword);
+        const hashed = await this.hashService.hash(dto.password);
         user.changePassword(hashed);
         await this.userRepository.update(user);
 
