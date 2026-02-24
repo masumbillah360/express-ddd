@@ -30,4 +30,5 @@ const userSchema = new Schema<IUserDocument>(
 // Index for faster lookups
 userSchema.index({ email: 1 });
 
-export const UserModel = mongoose.model<IUserDocument>('User', userSchema);
+export const UserModel =
+    mongoose.models.User || mongoose.model<IUserDocument>('User', userSchema);
