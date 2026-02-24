@@ -22,21 +22,7 @@ export class RegisterUseCase {
         const startTime = Date.now();
 
         try {
-            // 1. Input validation
-            if (!dto.name || !dto.email || !dto.password) {
-                throw new Error('Missing required fields');
-            }
-
-            if (dto.password.length < 8) {
-                throw new Error('Password must be at least 8 characters');
-            }
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(dto.email)) {
-                throw new Error('Invalid email format');
-            }
-
-            // 2. Check uniqueness (with cache check)
+            // 1. Check cache
             const cacheKey = `user:email:${dto.email}`;
             const cachedUser = await this.cacheService.get(cacheKey);
             if (cachedUser) {
@@ -53,20 +39,20 @@ export class RegisterUseCase {
                 throw new UserAlreadyExistsError();
             }
 
-            // 3. Hash password
+            // 2. Hash password
             const hashedPassword = await this.hashService.hash(dto.password);
 
-            // 4. Create domain entity
+            // 3. Create domain entity
             const user = User.create({
                 name: dto.name,
                 email: dto.email,
                 password: hashedPassword,
             });
 
-            // 5. Persist
+            // 4. Persist
             const savedUser = await this.userRepository.create(user);
 
-            // 6. Generate OTP → store in Redis
+            // 5. Generate OTP → store in Redis
             const otp = this.generateOTP();
             await this.cacheService.set(
                 `otp:verify-email:${dto.email.toLowerCase()}`,
@@ -74,7 +60,7 @@ export class RegisterUseCase {
                 this.otpExpiryMinutes * 60,
             );
 
-            // 7. Send verification email via background job
+            // 6. Send verification email via background job
             await this.queueService.addJob('email-queue', 'send-email', {
                 to: dto.email,
                 subject: 'Verify your email',
