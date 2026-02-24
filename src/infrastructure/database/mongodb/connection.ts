@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
+import { logger } from '../../logger/WinstonLogger';
 
 export const connectDatabase = async (uri: string): Promise<void> => {
     try {
         await mongoose.connect(uri);
-        console.log('✅ MongoDB connected');
+        logger.info('✅ MongoDB connected');
     } catch (error) {
-        console.error('❌ MongoDB connection failed:', error);
+        logger.error('❌ MongoDB connection failed:', error);
         process.exit(1);
     }
 };

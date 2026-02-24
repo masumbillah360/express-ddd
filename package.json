@@ -1,61 +1,62 @@
 {
-    "name": "express-ddd",
-    "version": "1.0.0",
-    "description": "",
-    "main": "dist/main/server.js",
-    "type": "module",
-    "scripts": {
-        "dev": "tsx watch src/main/server.ts",
-        "build": "tsc",
-        "start": "node dist/main/server.js",
-        "docker:up": "docker-compose up --build",
-        "docker:down": "docker-compose down",
-        "docker:clean": "docker-compose down -v --rmi all"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/masumbillah360/express-ddd.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/masumbillah360/express-ddd/issues"
-    },
-    "homepage": "https://github.com/masumbillah360/express-ddd#readme",
-    "dependencies": {
-        "@types/helmet": "^0.0.48",
-        "axios": "^1.13.5",
-        "bcryptjs": "^3.0.3",
-        "bullmq": "^5.70.1",
-        "cookie-parser": "^1.4.7",
-        "cors": "^2.8.6",
-        "dotenv": "^17.3.1",
-        "express": "^5.2.1",
-        "helmet": "^8.1.0",
-        "ioredis": "^5.9.3",
-        "jsonwebtoken": "^9.0.3",
-        "mongoose": "^9.2.1",
-        "nodemailer": "^8.0.1",
-        "prom-client": "^15.1.3",
-        "socket.io": "^4.7.2",
-        "uuid": "^13.0.0",
-        "winston": "^3.19.0",
-        "xss-clean": "^0.1.4",
-        "zod": "^4.3.6"
-    },
-    "devDependencies": {
-        "@types/bcryptjs": "^2.4.6",
-        "@types/cookie-parser": "^1.4.10",
-        "@types/cors": "^2.8.19",
-        "@types/express": "^5.0.6",
-        "@types/socket.io": "^3.0.2",
-        "@types/jsonwebtoken": "^9.0.10",
-        "@types/node": "^25.3.0",
-        "@types/nodemailer": "^7.0.11",
-        "@types/uuid": "^10.0.0",
-        "nodemon": "^3.1.14",
-        "tsx": "^4.21.0",
-        "typescript": "^5.9.3"
-    }
+  "name": "express-ddd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main/server.ts",
+    "build": "tsc",
+    "start": "node dist/main/server.js",
+    "docker:up": "docker-compose up --build",
+    "docker:down": "docker-compose down",
+    "docker:clean": "docker-compose down -v --rmi all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masumbillah360/express-ddd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masumbillah360/express-ddd/issues"
+  },
+  "homepage": "https://github.com/masumbillah360/express-ddd#readme",
+  "dependencies": {
+    "@types/helmet": "^0.0.48",
+    "axios": "^1.13.5",
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^5.70.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.9.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.1",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^8.0.1",
+    "prom-client": "^15.1.3",
+    "socket.io": "^4.7.2",
+    "uuid": "^13.0.0",
+    "winston": "^3.19.0",
+    "xss-clean": "^0.1.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/socket.io": "^3.0.2",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.3.0",
+    "@types/nodemailer": "^7.0.11",
+    "@types/uuid": "^10.0.0",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
 }
